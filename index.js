@@ -236,7 +236,7 @@ function getArtistByIndex(array, index) {
 
 function get20s(/* Code here */){
 
-  /* Code here */
+ 
 
 }
 
@@ -280,7 +280,7 @@ function addArtist(array,id,name,years,genre,nationality,bio,wikipedia,paintings
    return array;
   
   }
-console.log(addArtist(artists,"20","Miah Davis","1994-9999+","Symolism","American"," Inspired by the country's popular culture, he deliberately stood aloof from contemporary art trends. His work contains fantastic illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Frida Kahlo Museum,Mexico City, Chapingo, Cuernavaca, San Francisco, Detroit, and New York City."))
+console.log(addArtist(artists,"20","Miah Davis","1994-9999+","Symolism","American"," Inspired by the country's popular culture, he deliberately stood aloof from contemporary art trends. His work contains fantastic illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Frida Kahlo Museum,Mexico City, Chapingo, Cuernavaca, San Francisco, Detroit, and New York City.","--","1"))
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
     (1) artists array 
@@ -289,13 +289,18 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
-
-  /* Code here */
-
+function lotsOfArt(array,){
+  var filter=[]
+  
+for(i=0; i<array.length; i++){
+  if(artists("paintings"<=100))
+    filter.push(array[i])
+}
+  
+return array
 }
 
-
+console.log(lotsOfArt(artists,"paintings"))
 
 // 🎨🎨 STRETCH 🎨🎨//
 
