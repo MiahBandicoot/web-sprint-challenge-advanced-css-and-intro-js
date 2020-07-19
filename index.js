@@ -216,7 +216,7 @@ function changeName(array,index,name){
 array[index].name=name;
 return array;
 }
-// console.log(changeName(artists,8,'Vincent Van Gogh'))
+console.log(changeName(artists,8,'Vincent Van Gogh'))
 // /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
 //  *     (1) artists array
 //  *     (2) a number which is the desired index in the array.
@@ -234,11 +234,24 @@ function getArtistByIndex(array, index) {
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(){
-
+function get20s(array){ 
+    var century=[]
+    
+    for(i=0; i<array.length; i++){
+      if(array[i].years > "1900" && array[i].years[5] < "2")
+        century.push(array[i])
+    }
+    
+    return century 
+    }	
+    
+    
+    
+    console.log(get20s(artists))
+      
  
 
-}
+
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -253,16 +266,16 @@ function get20s(){
  *  
 REPAIR */
 function removeArtist(array, index){
-    for(let i=0; i < array.length; i++){
-      
-      if(array[i]===(index)){/*not looking at right thing*/
-      array.splice(i,1)
-      }
-    }
+    // for(let i=0; i < array.length; i++){
+    //       if(array[i]===[index]){/*not looking at right thing*/
+    //   array.splice([9],1)
+    //   }
+    array.splice(index,1)
+// {
  return array
 }
-  
- console.log(removeArtist(artists),10)
+ 
+ console.log(removeArtist(artists,9))
 
 /**
 /* Task 6: Create a function called `addArtist` that can accept an object of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
@@ -282,7 +295,7 @@ function addArtist(array,id,name,years,genre,nationality,bio,wikipedia,paintings
    return array;
   
   }
-console.log(addArtist(artists,"20","Miah Davis","1994-9999+","Symolism","American"," Inspired by the country's popular culture, he deliberately stood aloof from contemporary art trends. His work contains fantastic illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Frida Kahlo Museum,Mexico City, Chapingo, Cuernavaca, San Francisco, Detroit, and New York City.","--","1"))
+console.log(addArtist(artists,20,"Miah Davis","1994-9999+","Symolism","American"," Inspired by the country's popular culture, he deliberately stood aloof from contemporary art trends. His work contains fantastic illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Frida Kahlo Museum,Mexico City, Chapingo, Cuernavaca, San Francisco, Detroit, and New York City.","--","1"))
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
     (1) artists array 
@@ -292,18 +305,14 @@ and returns an array with names of artists who painted more than 100 paintings.
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
 function lotsOfArt(array){  
-// for(i=0; i<array.length; i++){
-//   if(array [i] )
-//     array.push(array[i])
-// }var filter=[]
-  /* Code here */	
+var hundred=[]
 
 for(i=0; i<array.length; i++){
-  if(array(i))
-    filter.push(array[i])
+  if(array[i].paintings > 100 )
+    hundred.push(array[i])
 }
 
-return paintings
+return hundred
 }	
 
 
@@ -311,7 +320,11 @@ return paintings
 console.log(lotsOfArt(artists))
   
 
-
+// for(i=0; i<array.length; i++){
+//   if(array [i] )
+//     array.push(array[i])
+// }var filter=[]
+  /* Code here */	
 // 🎨🎨 STRETCH 🎨🎨//
 
 
