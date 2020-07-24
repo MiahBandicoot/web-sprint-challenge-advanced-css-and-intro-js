@@ -264,7 +264,7 @@ function get20s(array){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset. 
  *  
-REPAIR */
+*/
 function removeArtist(array, index){
     // for(let i=0; i < array.length; i++){
     //       if(array[i]===[index]){/*not looking at right thing*/
